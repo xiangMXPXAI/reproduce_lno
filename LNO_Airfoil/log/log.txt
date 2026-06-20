@@ -1,0 +1,678 @@
+Number of Model Parameters: 1292161
+DistributedDataParallel(
+  (module): LNO(
+    (act): GELU(approximate='none')
+    (trunk_projector): MLP(
+      (act): GELU(approximate='none')
+      (input): Linear(in_features=2, out_features=128, bias=True)
+      (hidden): ModuleList(
+        (0-1): 2 x Linear(in_features=128, out_features=128, bias=True)
+      )
+      (output): Linear(in_features=128, out_features=128, bias=True)
+    )
+    (branch_projector): MLP(
+      (act): GELU(approximate='none')
+      (input): Linear(in_features=4, out_features=128, bias=True)
+      (hidden): ModuleList(
+        (0-1): 2 x Linear(in_features=128, out_features=128, bias=True)
+      )
+      (output): Linear(in_features=128, out_features=128, bias=True)
+    )
+    (out_mlp): MLP(
+      (act): GELU(approximate='none')
+      (input): Linear(in_features=128, out_features=128, bias=True)
+      (hidden): ModuleList(
+        (0-1): 2 x Linear(in_features=128, out_features=128, bias=True)
+      )
+      (output): Linear(in_features=128, out_features=1, bias=True)
+    )
+    (attention_projector): MLP(
+      (act): GELU(approximate='none')
+      (input): Linear(in_features=128, out_features=128, bias=True)
+      (hidden): ModuleList(
+        (0-1): 2 x Linear(in_features=128, out_features=128, bias=True)
+      )
+      (output): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (attn_blocks): Sequential(
+      (0): AttentionBlock(
+        (act): GELU(approximate='none')
+        (self_attn): SelfAttention(
+          (Wq): Linear(in_features=128, out_features=128, bias=True)
+          (Wk): Linear(in_features=128, out_features=128, bias=True)
+          (Wv): Linear(in_features=128, out_features=128, bias=True)
+          (proj): Linear(in_features=128, out_features=128, bias=True)
+        )
+        (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (drop): Dropout(p=0.0, inplace=False)
+        (mlp): Sequential(
+          (0): Linear(in_features=128, out_features=256, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=256, out_features=128, bias=True)
+        )
+      )
+      (1): AttentionBlock(
+        (act): GELU(approximate='none')
+        (self_attn): SelfAttention(
+          (Wq): Linear(in_features=128, out_features=128, bias=True)
+          (Wk): Linear(in_features=128, out_features=128, bias=True)
+          (Wv): Linear(in_features=128, out_features=128, bias=True)
+          (proj): Linear(in_features=128, out_features=128, bias=True)
+        )
+        (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (drop): Dropout(p=0.0, inplace=False)
+        (mlp): Sequential(
+          (0): Linear(in_features=128, out_features=256, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=256, out_features=128, bias=True)
+        )
+      )
+      (2): AttentionBlock(
+        (act): GELU(approximate='none')
+        (self_attn): SelfAttention(
+          (Wq): Linear(in_features=128, out_features=128, bias=True)
+          (Wk): Linear(in_features=128, out_features=128, bias=True)
+          (Wv): Linear(in_features=128, out_features=128, bias=True)
+          (proj): Linear(in_features=128, out_features=128, bias=True)
+        )
+        (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (drop): Dropout(p=0.0, inplace=False)
+        (mlp): Sequential(
+          (0): Linear(in_features=128, out_features=256, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=256, out_features=128, bias=True)
+        )
+      )
+      (3): AttentionBlock(
+        (act): GELU(approximate='none')
+        (self_attn): SelfAttention(
+          (Wq): Linear(in_features=128, out_features=128, bias=True)
+          (Wk): Linear(in_features=128, out_features=128, bias=True)
+          (Wv): Linear(in_features=128, out_features=128, bias=True)
+          (proj): Linear(in_features=128, out_features=128, bias=True)
+        )
+        (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (drop): Dropout(p=0.0, inplace=False)
+        (mlp): Sequential(
+          (0): Linear(in_features=128, out_features=256, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=256, out_features=128, bias=True)
+        )
+      )
+      (4): AttentionBlock(
+        (act): GELU(approximate='none')
+        (self_attn): SelfAttention(
+          (Wq): Linear(in_features=128, out_features=128, bias=True)
+          (Wk): Linear(in_features=128, out_features=128, bias=True)
+          (Wv): Linear(in_features=128, out_features=128, bias=True)
+          (proj): Linear(in_features=128, out_features=128, bias=True)
+        )
+        (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (drop): Dropout(p=0.0, inplace=False)
+        (mlp): Sequential(
+          (0): Linear(in_features=128, out_features=256, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=256, out_features=128, bias=True)
+        )
+      )
+      (5): AttentionBlock(
+        (act): GELU(approximate='none')
+        (self_attn): SelfAttention(
+          (Wq): Linear(in_features=128, out_features=128, bias=True)
+          (Wk): Linear(in_features=128, out_features=128, bias=True)
+          (Wv): Linear(in_features=128, out_features=128, bias=True)
+          (proj): Linear(in_features=128, out_features=128, bias=True)
+        )
+        (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (drop): Dropout(p=0.0, inplace=False)
+        (mlp): Sequential(
+          (0): Linear(in_features=128, out_features=256, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=256, out_features=128, bias=True)
+        )
+      )
+      (6): AttentionBlock(
+        (act): GELU(approximate='none')
+        (self_attn): SelfAttention(
+          (Wq): Linear(in_features=128, out_features=128, bias=True)
+          (Wk): Linear(in_features=128, out_features=128, bias=True)
+          (Wv): Linear(in_features=128, out_features=128, bias=True)
+          (proj): Linear(in_features=128, out_features=128, bias=True)
+        )
+        (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (drop): Dropout(p=0.0, inplace=False)
+        (mlp): Sequential(
+          (0): Linear(in_features=128, out_features=256, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=256, out_features=128, bias=True)
+        )
+      )
+      (7): AttentionBlock(
+        (act): GELU(approximate='none')
+        (self_attn): SelfAttention(
+          (Wq): Linear(in_features=128, out_features=128, bias=True)
+          (Wk): Linear(in_features=128, out_features=128, bias=True)
+          (Wv): Linear(in_features=128, out_features=128, bias=True)
+          (proj): Linear(in_features=128, out_features=128, bias=True)
+        )
+        (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (ln2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (drop): Dropout(p=0.0, inplace=False)
+        (mlp): Sequential(
+          (0): Linear(in_features=128, out_features=256, bias=True)
+          (1): GELU(approximate='none')
+          (2): Linear(in_features=256, out_features=128, bias=True)
+        )
+      )
+    )
+  )
+)
+Start Training...
+Epoch: 1	Learning Rate :3.467148803248856e-07	Train Loss: 1.3279709815979004	Val Loss: 1.107131838798523
+Epoch: 2	Learning Rate :1.0866160240210424e-06	Train Loss: 0.6282344460487366	Val Loss: 0.15580739080905914
+Epoch: 3	Learning Rate :2.3189731795749714e-06	Train Loss: 0.1599586009979248	Val Loss: 0.1534910649061203
+Epoch: 4	Learning Rate :4.042570061965622e-06	Train Loss: 0.15944495797157288	Val Loss: 0.1534864455461502
+Epoch: 5	Learning Rate :6.255705553086591e-06	Train Loss: 0.1594845950603485	Val Loss: 0.15348905324935913
+Epoch: 6	Learning Rate :8.956195380679585e-06	Train Loss: 0.15952201187610626	Val Loss: 0.1534937024116516
+Epoch: 7	Learning Rate :1.2141374274118877e-05	Train Loss: 0.159556046128273	Val Loss: 0.153555765748024
+Epoch: 8	Learning Rate :1.5808098594922776e-05	Train Loss: 0.1596391201019287	Val Loss: 0.15359154343605042
+Epoch: 9	Learning Rate :1.9952749439392653e-05	Train Loss: 0.1596383899450302	Val Loss: 0.1539447158575058
+Epoch: 10	Learning Rate :2.4571236210320867e-05	Train Loss: 0.15959466993808746	Val Loss: 0.15349707007408142
+Epoch: 11	Learning Rate :2.9659000654237754e-05	Train Loss: 0.1596246212720871	Val Loss: 0.15348584949970245
+Epoch: 12	Learning Rate :3.521102136021888e-05	Train Loss: 0.15961211919784546	Val Loss: 0.15376651287078857
+Epoch: 13	Learning Rate :4.122181871580677e-05	Train Loss: 0.15957117080688477	Val Loss: 0.1534896343946457
+Epoch: 14	Learning Rate :4.7685460315159906e-05	Train Loss: 0.15961869060993195	Val Loss: 0.15369845926761627
+Epoch: 15	Learning Rate :5.459556681408921e-05	Train Loss: 0.15961095690727234	Val Loss: 0.15373116731643677
+Epoch: 16	Learning Rate :6.194531822620428e-05	Train Loss: 0.1596747189760208	Val Loss: 0.15349271893501282
+Epoch: 17	Learning Rate :6.972746065395552e-05	Train Loss: 0.15968924760818481	Val Loss: 0.15348701179027557
+Epoch: 18	Learning Rate :7.793431344792667e-05	Train Loss: 0.1595907360315323	Val Loss: 0.15390393137931824
+Epoch: 19	Learning Rate :8.655777678731613e-05	Train Loss: 0.1595822274684906	Val Loss: 0.15349675714969635
+Epoch: 20	Learning Rate :9.558933967412128e-05	Train Loss: 0.15955446660518646	Val Loss: 0.15394902229309082
+Epoch: 21	Learning Rate :0.00010502008833313708	Train Loss: 0.1597355455160141	Val Loss: 0.1544901579618454
+Epoch: 22	Learning Rate :0.00011484071500948126	Train Loss: 0.15959860384464264	Val Loss: 0.15430304408073425
+Epoch: 23	Learning Rate :0.00012504152715495825	Train Loss: 0.15965205430984497	Val Loss: 0.15349479019641876
+Epoch: 24	Learning Rate :0.00013561245699419966	Train Loss: 0.15957680344581604	Val Loss: 0.15369530022144318
+Epoch: 25	Learning Rate :0.00014654307146113818	Train Loss: 0.1595773696899414	Val Loss: 0.15362340211868286
+Epoch: 26	Learning Rate :0.00015782258249600744	Train Loss: 0.15955160558223724	Val Loss: 0.15358832478523254
+Epoch: 27	Learning Rate :0.00016943985769270632	Train Loss: 0.15957728028297424	Val Loss: 0.15365351736545563
+Epoch: 28	Learning Rate :0.00018138343128601918	Train Loss: 0.15954607725143433	Val Loss: 0.15329529345035553
+Epoch: 29	Learning Rate :0.00019364151546784596	Train Loss: 0.15184864401817322	Val Loss: 0.1376209557056427
+Epoch: 30	Learning Rate :0.00020620201202127748	Train Loss: 0.14152470231056213	Val Loss: 0.13437822461128235
+Epoch: 31	Learning Rate :0.0002190525242610292	Train Loss: 0.13579751551151276	Val Loss: 0.12529997527599335
+Epoch: 32	Learning Rate :0.00023218036926845166	Train Loss: 0.12031985074281693	Val Loss: 0.11064480245113373
+Epoch: 33	Learning Rate :0.00024557259040904197	Train Loss: 0.11353296041488647	Val Loss: 0.10965187847614288
+Epoch: 34	Learning Rate :0.00025921597012009974	Train Loss: 0.11352918297052383	Val Loss: 0.11461391299962997
+Epoch: 35	Learning Rate :0.0002730970429559099	Train Loss: 0.1093631386756897	Val Loss: 0.11252418905496597
+Epoch: 36	Learning Rate :0.00028720210887757467	Train Loss: 0.10775628685951233	Val Loss: 0.11297254264354706
+Epoch: 37	Learning Rate :0.00030151724677437975	Train Loss: 0.10643160343170166	Val Loss: 0.1010417640209198
+Epoch: 38	Learning Rate :0.0003160283282033485	Train Loss: 0.10621997714042664	Val Loss: 0.10183614492416382
+Epoch: 39	Learning Rate :0.0003307210313334253	Train Loss: 0.10575783997774124	Val Loss: 0.10628241300582886
+Epoch: 40	Learning Rate :0.00034558085508052435	Train Loss: 0.10613095760345459	Val Loss: 0.10101728141307831
+Epoch: 41	Learning Rate :0.0003605931334194931	Train Loss: 0.1062416136264801	Val Loss: 0.10214035958051682
+Epoch: 42	Learning Rate :0.0003757430498588678	Train Loss: 0.10536755621433258	Val Loss: 0.10223371535539627
+Epoch: 43	Learning Rate :0.00039101565206412935	Train Loss: 0.1055256575345993	Val Loss: 0.10159261524677277
+Epoch: 44	Learning Rate :0.00040639586661503477	Train Loss: 0.10473275929689407	Val Loss: 0.10069724917411804
+Epoch: 45	Learning Rate :0.0004218685138824517	Train Loss: 0.1046552062034607	Val Loss: 0.10449795424938202
+Epoch: 46	Learning Rate :0.0004374183230100192	Train Loss: 0.10511913895606995	Val Loss: 0.09999680519104004
+Epoch: 47	Learning Rate :0.000453029946985844	Train Loss: 0.1044781431555748	Val Loss: 0.10166539251804352
+Epoch: 48	Learning Rate :0.0004686879777893605	Train Loss: 0.10478928685188293	Val Loss: 0.10027643293142319
+Epoch: 49	Learning Rate :0.00048437696159840356	Train Loss: 0.1039370521903038	Val Loss: 0.09896437078714371
+Epoch: 50	Learning Rate :0.0005000814140414842	Train Loss: 0.10285718739032745	Val Loss: 0.09415944665670395
+Epoch: 51	Learning Rate :0.0005157858354802186	Train Loss: 0.09785765409469604	Val Loss: 0.09129074960947037
+Epoch: 52	Learning Rate :0.0005314747263068223	Train Loss: 0.09378798305988312	Val Loss: 0.08994817733764648
+Epoch: 53	Learning Rate :0.000547132602241577	Train Loss: 0.09375270456075668	Val Loss: 0.08832858502864838
+Epoch: 54	Learning Rate :0.0005627440096151657	Train Loss: 0.09082335233688354	Val Loss: 0.09842082113027573
+Epoch: 55	Learning Rate :0.0005782935406208003	Train Loss: 0.08555244654417038	Val Loss: 0.07666895538568497
+Epoch: 56	Learning Rate :0.0005937658485210828	Train Loss: 0.08529850095510483	Val Loss: 0.10191229730844498
+Epoch: 57	Learning Rate :0.0006091456627945928	Train Loss: 0.08435065299272537	Val Loss: 0.08010698854923248
+Epoch: 58	Learning Rate :0.0006244178042072556	Train Loss: 0.08131825178861618	Val Loss: 0.0826432853937149
+Epoch: 59	Learning Rate :0.0006395671997936104	Train Loss: 0.07666686922311783	Val Loss: 0.06896292418241501
+Epoch: 60	Learning Rate :0.0006545788977331995	Train Loss: 0.07370273768901825	Val Loss: 0.07843996584415436
+Epoch: 61	Learning Rate :0.0006694380821073878	Train Loss: 0.06893886625766754	Val Loss: 0.06762581318616867
+Epoch: 62	Learning Rate :0.0006841300875220581	Train Loss: 0.08178498595952988	Val Loss: 0.0770917534828186
+Epoch: 63	Learning Rate :0.0006986404135817398	Train Loss: 0.06997914612293243	Val Loss: 0.06766601651906967
+Epoch: 64	Learning Rate :0.0007129547392008958	Train Loss: 0.06157037615776062	Val Loss: 0.05476338788866997
+Epoch: 65	Learning Rate :0.0007270589367382332	Train Loss: 0.06016327068209648	Val Loss: 0.05937179550528526
+Epoch: 66	Learning Rate :0.000740939085940097	Train Loss: 0.056507308036088943	Val Loss: 0.046873245388269424
+Epoch: 67	Learning Rate :0.0007545814876791775	Train Loss: 0.055064406245946884	Val Loss: 0.05913180112838745
+Epoch: 68	Learning Rate :0.0007679726774749767	Train Loss: 0.05348876118659973	Val Loss: 0.04328403249382973
+Epoch: 69	Learning Rate :0.0007810994387826888	Train Loss: 0.05060156434774399	Val Loss: 0.04907773435115814
+Epoch: 70	Learning Rate :0.0007939488160373773	Train Loss: 0.05176694691181183	Val Loss: 0.05334175005555153
+Epoch: 71	Learning Rate :0.0008065081274405755	Train Loss: 0.05063707381486893	Val Loss: 0.04707452654838562
+Epoch: 72	Learning Rate :0.0008187649774766924	Train Loss: 0.046938493847846985	Val Loss: 0.04211540147662163
+Epoch: 73	Learning Rate :0.0008307072691468693	Train Loss: 0.049741391092538834	Val Loss: 0.051543939858675
+Epoch: 74	Learning Rate :0.0008423232159082107	Train Loss: 0.04824507609009743	Val Loss: 0.044666171073913574
+Epoch: 75	Learning Rate :0.000853601353306611	Train Loss: 0.049845416098833084	Val Loss: 0.05742548406124115
+Epoch: 76	Learning Rate :0.000864530550291691	Train Loss: 0.046275146305561066	Val Loss: 0.04571797698736191
+Epoch: 77	Learning Rate :0.0008751000202026798	Train Loss: 0.04710262641310692	Val Loss: 0.053019408136606216
+Epoch: 78	Learning Rate :0.000885299331414398	Train Loss: 0.04770120978355408	Val Loss: 0.04069078713655472
+Epoch: 79	Learning Rate :0.0008951184176328364	Train Loss: 0.04442001134157181	Val Loss: 0.038195524364709854
+Epoch: 80	Learning Rate :0.000904547587830167	Train Loss: 0.046424299478530884	Val Loss: 0.04915929585695267
+Epoch: 81	Learning Rate :0.0009135775358093829	Train Loss: 0.04503771290183067	Val Loss: 0.04366609826683998
+Epoch: 82	Learning Rate :0.0009221993493891257	Train Loss: 0.04390575736761093	Val Loss: 0.03808700665831566
+Epoch: 83	Learning Rate :0.0009304045191996368	Train Loss: 0.04561315476894379	Val Loss: 0.05177375301718712
+Epoch: 84	Learning Rate :0.0009381849470811483	Train Loss: 0.04514240100979805	Val Loss: 0.03715582191944122
+Epoch: 85	Learning Rate :0.0009455329540764302	Train Loss: 0.04238184168934822	Val Loss: 0.03483753278851509
+Epoch: 86	Learning Rate :0.000952441288009599	Train Loss: 0.04197947308421135	Val Loss: 0.039182037115097046
+Epoch: 87	Learning Rate :0.0009589031306437125	Train Loss: 0.041628580540418625	Val Loss: 0.04051680490374565
+Epoch: 88	Learning Rate :0.0009649121044100855	Train Loss: 0.04286910220980644	Val Loss: 0.04383877292275429
+Epoch: 89	Learning Rate :0.0009704622787026826	Train Loss: 0.04179953411221504	Val Loss: 0.04115898162126541
+Epoch: 90	Learning Rate :0.0009755481757313796	Train Loss: 0.04195793718099594	Val Loss: 0.045637406408786774
+Epoch: 91	Learning Rate :0.0009801647759283122	Train Loss: 0.04082021117210388	Val Loss: 0.039145778864622116
+Epoch: 92	Learning Rate :0.000984307522901981	Train Loss: 0.042529065161943436	Val Loss: 0.037067413330078125
+Epoch: 93	Learning Rate :0.000987972327934219	Train Loss: 0.041462428867816925	Val Loss: 0.05381816625595093
+Epoch: 94	Learning Rate :0.0009911555740155854	Train Loss: 0.040633320808410645	Val Loss: 0.03328832611441612
+Epoch: 95	Learning Rate :0.0009938541194152032	Train Loss: 0.03864092379808426	Val Loss: 0.03852535039186478
+Epoch: 96	Learning Rate :0.0009960653007815156	Train Loss: 0.0396355502307415	Val Loss: 0.034007854759693146
+Epoch: 97	Learning Rate :0.000997786935770904	Train Loss: 0.0399891659617424	Val Loss: 0.04070832207798958
+Epoch: 98	Learning Rate :0.0009990173252015684	Train Loss: 0.03911289572715759	Val Loss: 0.03549567610025406
+Epoch: 99	Learning Rate :0.0009997552547305504	Train Loss: 0.03587513417005539	Val Loss: 0.035589199513196945
+Epoch: 100	Learning Rate :0.00099999999975326	Train Loss: 0.03726901859045029	Val Loss: 0.0294724702835083
+Epoch: 101	Learning Rate :0.0009999844552070311	Train Loss: 0.03718634694814682	Val Loss: 0.03694962337613106
+Epoch: 102	Learning Rate :0.0009999380692647766	Train Loss: 0.03886592388153076	Val Loss: 0.03156497702002525
+Epoch: 103	Learning Rate :0.0009998608447877998	Train Loss: 0.036367956548929214	Val Loss: 0.03157004714012146
+Epoch: 104	Learning Rate :0.0009997527865396698	Train Loss: 0.03720523416996002	Val Loss: 0.03668602183461189
+Epoch: 105	Learning Rate :0.000999613901185929	Train Loss: 0.0367308147251606	Val Loss: 0.0328526496887207
+Epoch: 106	Learning Rate :0.0009994441972936796	Train Loss: 0.03666199371218681	Val Loss: 0.028970055282115936
+Epoch: 107	Learning Rate :0.0009992436853310572	Train Loss: 0.03668017312884331	Val Loss: 0.029090501368045807
+Epoch: 108	Learning Rate :0.0009990123776665845	Train Loss: 0.034800440073013306	Val Loss: 0.031131507828831673
+Epoch: 109	Learning Rate :0.0009987502885684077	Train Loss: 0.03385762497782707	Val Loss: 0.03452083840966225
+Epoch: 110	Learning Rate :0.0009984574342034166	Train Loss: 0.033803150057792664	Val Loss: 0.031635068356990814
+Epoch: 111	Learning Rate :0.0009981338326362484	Train Loss: 0.034707505255937576	Val Loss: 0.029990648850798607
+Epoch: 112	Learning Rate :0.0009977795038281713	Train Loss: 0.03549434244632721	Val Loss: 0.029546884819865227
+Epoch: 113	Learning Rate :0.000997394469635856	Train Loss: 0.035245880484580994	Val Loss: 0.03306303918361664
+Epoch: 114	Learning Rate :0.0009969787538100247	Train Loss: 0.03389854356646538	Val Loss: 0.02389904484152794
+Epoch: 115	Learning Rate :0.000996532381993988	Train Loss: 0.034200821071863174	Val Loss: 0.03659716993570328
+Epoch: 116	Learning Rate :0.0009960553817220618	Train Loss: 0.03362734988331795	Val Loss: 0.027657747268676758
+Epoch: 117	Learning Rate :0.0009955477824178701	Train Loss: 0.03178241848945618	Val Loss: 0.02580047957599163
+Epoch: 118	Learning Rate :0.0009950096153925289	Train Loss: 0.030504664406180382	Val Loss: 0.024311458691954613
+Epoch: 119	Learning Rate :0.0009944409138427151	Train Loss: 0.03248727321624756	Val Loss: 0.03197992220520973
+Epoch: 120	Learning Rate :0.0009938417128486192	Train Loss: 0.03282748907804489	Val Loss: 0.031007539480924606
+Epoch: 121	Learning Rate :0.000993212049371781	Train Loss: 0.031175684183835983	Val Loss: 0.03511303290724754
+Epoch: 122	Learning Rate :0.00099255196225281	Train Loss: 0.03133946284651756	Val Loss: 0.03039451502263546
+Epoch: 123	Learning Rate :0.0009918614922089885	Train Loss: 0.031731683760881424	Val Loss: 0.030983081087470055
+Epoch: 124	Learning Rate :0.0009911406818317618	Train Loss: 0.03082609549164772	Val Loss: 0.025579823181033134
+Epoch: 125	Learning Rate :0.0009903895755841087	Train Loss: 0.030278334394097328	Val Loss: 0.03050054982304573
+Epoch: 126	Learning Rate :0.000989608219797801	Train Loss: 0.031879980117082596	Val Loss: 0.03437519073486328
+Epoch: 127	Learning Rate :0.000988796662670544	Train Loss: 0.029912501573562622	Val Loss: 0.03313450887799263
+Epoch: 128	Learning Rate :0.000987954954263004	Train Loss: 0.0288524329662323	Val Loss: 0.03473791852593422
+Epoch: 129	Learning Rate :0.0009870831464957202	Train Loss: 0.03197892755270004	Val Loss: 0.0331934429705143
+Epoch: 130	Learning Rate :0.0009861812931459028	Train Loss: 0.028105834499001503	Val Loss: 0.029789680615067482
+Epoch: 131	Learning Rate :0.000985249449844114	Train Loss: 0.030069751664996147	Val Loss: 0.0328817181289196
+Epoch: 132	Learning Rate :0.0009842876740708386	Train Loss: 0.03012080118060112	Val Loss: 0.032389916479587555
+Epoch: 133	Learning Rate :0.000983296025152936	Train Loss: 0.0286840982735157	Val Loss: 0.02259066514670849
+Epoch: 134	Learning Rate :0.0009822745642599827	Train Loss: 0.029587356373667717	Val Loss: 0.03498392179608345
+Epoch: 135	Learning Rate :0.0009812233544004986	Train Loss: 0.028781812638044357	Val Loss: 0.027074996381998062
+Epoch: 136	Learning Rate :0.000980142460418059	Train Loss: 0.030405128374695778	Val Loss: 0.027182631194591522
+Epoch: 137	Learning Rate :0.0009790319489872963	Train Loss: 0.027031531557440758	Val Loss: 0.02232719212770462
+Epoch: 138	Learning Rate :0.0009778918886097865	Train Loss: 0.028977638110518456	Val Loss: 0.02315601520240307
+Epoch: 139	Learning Rate :0.000976722349609824	Train Loss: 0.027488941326737404	Val Loss: 0.02817525528371334
+Epoch: 140	Learning Rate :0.000975523404130083	Train Loss: 0.027688996866345406	Val Loss: 0.0279241930693388
+Epoch: 141	Learning Rate :0.0009742951261271685	Train Loss: 0.02753737010061741	Val Loss: 0.027978116646409035
+Epoch: 142	Learning Rate :0.0009730375913670535	Train Loss: 0.027357039973139763	Val Loss: 0.02016148343682289
+Epoch: 143	Learning Rate :0.0009717508774204053	Train Loss: 0.02547553926706314	Val Loss: 0.03683606907725334
+Epoch: 144	Learning Rate :0.0009704350636578013	Train Loss: 0.026780229061841965	Val Loss: 0.028850248083472252
+Epoch: 145	Learning Rate :0.0009690902312448322	Train Loss: 0.026019984856247902	Val Loss: 0.031440768390893936
+Epoch: 146	Learning Rate :0.0009677164631370961	Train Loss: 0.026798313483595848	Val Loss: 0.02674444578588009
+Epoch: 147	Learning Rate :0.000966313844075081	Train Loss: 0.026639852672815323	Val Loss: 0.021064119413495064
+Epoch: 148	Learning Rate :0.0009648824605789373	Train Loss: 0.026173610240221024	Val Loss: 0.021756112575531006
+Epoch: 149	Learning Rate :0.0009634224009431418	Train Loss: 0.027109870687127113	Val Loss: 0.029424278065562248
+Epoch: 150	Learning Rate :0.0009619337552310499	Train Loss: 0.02714434638619423	Val Loss: 0.02262224443256855
+Epoch: 151	Learning Rate :0.0009604166152693415	Train Loss: 0.02613111585378647	Val Loss: 0.021845189854502678
+Epoch: 152	Learning Rate :0.0009588710746423559	Train Loss: 0.02560984343290329	Val Loss: 0.026759441941976547
+Epoch: 153	Learning Rate :0.0009572972286863191	Train Loss: 0.02482929639518261	Val Loss: 0.022096576169133186
+Epoch: 154	Learning Rate :0.000955695174483463	Train Loss: 0.026785654947161674	Val Loss: 0.020890992134809494
+Epoch: 155	Learning Rate :0.0009540650108560373	Train Loss: 0.025528613477945328	Val Loss: 0.02072885073721409
+Epoch: 156	Learning Rate :0.0009524068383602132	Train Loss: 0.02531844936311245	Val Loss: 0.024451054632663727
+Epoch: 157	Learning Rate :0.000950720759279881	Train Loss: 0.02486860193312168	Val Loss: 0.023455997928977013
+Epoch: 158	Learning Rate :0.0009490068776203406	Train Loss: 0.02438976801931858	Val Loss: 0.02018345706164837
+Epoch: 159	Learning Rate :0.0009472652991018857	Train Loss: 0.024674495682120323	Val Loss: 0.024172428995370865
+Epoch: 160	Learning Rate :0.0009454961311532828	Train Loss: 0.024865208193659782	Val Loss: 0.025400303304195404
+Epoch: 161	Learning Rate :0.0009436994829051448	Train Loss: 0.024221602827310562	Val Loss: 0.024324798956513405
+Epoch: 162	Learning Rate :0.0009418754651831985	Train Loss: 0.024671100080013275	Val Loss: 0.024048244580626488
+Epoch: 163	Learning Rate :0.0009400241905014487	Train Loss: 0.02445358783006668	Val Loss: 0.024029040709137917
+Epoch: 164	Learning Rate :0.0009381457730552384	Train Loss: 0.023472104221582413	Val Loss: 0.025907523930072784
+Epoch: 165	Learning Rate :0.0009362403287142035	Train Loss: 0.024853944778442383	Val Loss: 0.0294660534709692
+Epoch: 166	Learning Rate :0.0009343079750151264	Train Loss: 0.024093180894851685	Val Loss: 0.019809763878583908
+Epoch: 167	Learning Rate :0.0009323488311546857	Train Loss: 0.023626690730452538	Val Loss: 0.02544877864420414
+Epoch: 168	Learning Rate :0.0009303630179821029	Train Loss: 0.0242477934807539	Val Loss: 0.021132104098796844
+Epoch: 169	Learning Rate :0.0009283506579916886	Train Loss: 0.02297878824174404	Val Loss: 0.01908513344824314
+Epoch: 170	Learning Rate :0.000926311875315286	Train Loss: 0.0225942675024271	Val Loss: 0.02810182049870491
+Epoch: 171	Learning Rate :0.0009242467957146143	Train Loss: 0.022785747423768044	Val Loss: 0.022818638011813164
+Epoch: 172	Learning Rate :0.0009221555465735104	Train Loss: 0.022754034027457237	Val Loss: 0.02353835478425026
+Epoch: 173	Learning Rate :0.0009200382568900722	Train Loss: 0.022337358444929123	Val Loss: 0.021066147834062576
+Epoch: 174	Learning Rate :0.0009178950572687004	Train Loss: 0.0229419507086277	Val Loss: 0.029872965067625046
+Epoch: 175	Learning Rate :0.0009157260799120434	Train Loss: 0.022557100281119347	Val Loss: 0.022109024226665497
+Epoch: 176	Learning Rate :0.000913531458612841	Train Loss: 0.022656690329313278	Val Loss: 0.02422761358320713
+Epoch: 177	Learning Rate :0.0009113113287456729	Train Loss: 0.021462783217430115	Val Loss: 0.01705312915146351
+Epoch: 178	Learning Rate :0.0009090658272586067	Train Loss: 0.021397730335593224	Val Loss: 0.022517649456858635
+Epoch: 179	Learning Rate :0.0009067950926647515	Train Loss: 0.021575285121798515	Val Loss: 0.0183586236089468
+Epoch: 180	Learning Rate :0.0009044992650337132	Train Loss: 0.02125311829149723	Val Loss: 0.022152461111545563
+Epoch: 181	Learning Rate :0.0009021784859829544	Train Loss: 0.020882148295640945	Val Loss: 0.019921088591217995
+Epoch: 182	Learning Rate :0.0008998328986690588	Train Loss: 0.022297309711575508	Val Loss: 0.0236580278724432
+Epoch: 183	Learning Rate :0.0008974626477789007	Train Loss: 0.021213162690401077	Val Loss: 0.020910732448101044
+Epoch: 184	Learning Rate :0.0008950678795207195	Train Loss: 0.021524833515286446	Val Loss: 0.018173806369304657
+Epoch: 185	Learning Rate :0.0008926487416151023	Train Loss: 0.02165113016963005	Val Loss: 0.02468477189540863
+Epoch: 186	Learning Rate :0.0008902053832858699	Train Loss: 0.019895318895578384	Val Loss: 0.02214696630835533
+Epoch: 187	Learning Rate :0.0008877379552508733	Train Loss: 0.022410798817873	Val Loss: 0.0188897792249918
+Epoch: 188	Learning Rate :0.0008852466097126966	Train Loss: 0.020806169137358665	Val Loss: 0.01922140270471573
+Epoch: 189	Learning Rate :0.0008827315003492675	Train Loss: 0.02021399699151516	Val Loss: 0.018057363107800484
+Epoch: 190	Learning Rate :0.0008801927823043791	Train Loss: 0.021227873861789703	Val Loss: 0.018914539366960526
+Epoch: 191	Learning Rate :0.0008776306121781186	Train Loss: 0.021455105394124985	Val Loss: 0.016364581882953644
+Epoch: 192	Learning Rate :0.0008750451480172084	Train Loss: 0.02117917500436306	Val Loss: 0.01587565615773201
+Epoch: 193	Learning Rate :0.0008724365493052565	Train Loss: 0.02024301327764988	Val Loss: 0.01989683508872986
+Epoch: 194	Learning Rate :0.0008698049769529192	Train Loss: 0.020092282444238663	Val Loss: 0.02156803011894226
+Epoch: 195	Learning Rate :0.0008671505932879748	Train Loss: 0.02037772908806801	Val Loss: 0.014638918451964855
+Epoch: 196	Learning Rate :0.000864473562045311	Train Loss: 0.0204753577709198	Val Loss: 0.016261227428913116
+Epoch: 197	Learning Rate :0.000861774048356825	Train Loss: 0.01972845010459423	Val Loss: 0.018956342712044716
+Epoch: 198	Learning Rate :0.000859052218741237	Train Loss: 0.019810549914836884	Val Loss: 0.025672275573015213
+Epoch: 199	Learning Rate :0.0008563082410938183	Train Loss: 0.02010728046298027	Val Loss: 0.021221760660409927
+Epoch: 200	Learning Rate :0.0008535422846760357	Train Loss: 0.019756250083446503	Val Loss: 0.017441337928175926
+Epoch: 201	Learning Rate :0.00085075452010511	Train Loss: 0.01957668364048004	Val Loss: 0.014837403781712055
+Epoch: 202	Learning Rate :0.0008479451193434913	Train Loss: 0.01961844228208065	Val Loss: 0.017334651201963425
+Epoch: 203	Learning Rate :0.0008451142556882519	Train Loss: 0.01870667189359665	Val Loss: 0.018067890778183937
+Epoch: 204	Learning Rate :0.0008422621037603968	Train Loss: 0.01798130013048649	Val Loss: 0.01668102853000164
+Epoch: 205	Learning Rate :0.000839388839494092	Train Loss: 0.018991103395819664	Val Loss: 0.015622374601662159
+Epoch: 206	Learning Rate :0.0008364946401258113	Train Loss: 0.020041778683662415	Val Loss: 0.018818369135260582
+Epoch: 207	Learning Rate :0.0008335796841834047	Train Loss: 0.01992517150938511	Val Loss: 0.019946705549955368
+Epoch: 208	Learning Rate :0.0008306441514750856	Train Loss: 0.01922496221959591	Val Loss: 0.0164421908557415
+Epoch: 209	Learning Rate :0.0008276882230783389	Train Loss: 0.01979808881878853	Val Loss: 0.013697821646928787
+Epoch: 210	Learning Rate :0.0008247120813287519	Train Loss: 0.018965747207403183	Val Loss: 0.018850019201636314
+Epoch: 211	Learning Rate :0.0008217159098087663	Train Loss: 0.01853121444582939	Val Loss: 0.017732320353388786
+Epoch: 212	Learning Rate :0.000818699893336355	Train Loss: 0.018627643585205078	Val Loss: 0.016907036304473877
+Epoch: 213	Learning Rate :0.0008156642179536204	Train Loss: 0.01884135603904724	Val Loss: 0.015766514465212822
+Epoch: 214	Learning Rate :0.0008126090709153198	Train Loss: 0.018038170412182808	Val Loss: 0.017738640308380127
+Epoch: 215	Learning Rate :0.0008095346406773134	Train Loss: 0.017466489225625992	Val Loss: 0.018742846325039864
+Epoch: 216	Learning Rate :0.00080644111688494	Train Loss: 0.0179140642285347	Val Loss: 0.0186772458255291
+Epoch: 217	Learning Rate :0.0008033286903613192	Train Loss: 0.019694222137331963	Val Loss: 0.019840171560645103
+Epoch: 218	Learning Rate :0.0008001975530955794	Train Loss: 0.018478546291589737	Val Loss: 0.01654627174139023
+Epoch: 219	Learning Rate :0.0007970478982310164	Train Loss: 0.01756279543042183	Val Loss: 0.01883314736187458
+Epoch: 220	Learning Rate :0.0007938799200531785	Train Loss: 0.018025733530521393	Val Loss: 0.0164247564971447
+Epoch: 221	Learning Rate :0.000790693813977882	Train Loss: 0.018330635502934456	Val Loss: 0.01813262514770031
+Epoch: 222	Learning Rate :0.0007874897765391578	Train Loss: 0.017072919756174088	Val Loss: 0.013768388889729977
+Epoch: 223	Learning Rate :0.0007842680053771272	Train Loss: 0.017866313457489014	Val Loss: 0.016609301790595055
+Epoch: 224	Learning Rate :0.0007810286992258116	Train Loss: 0.017686430364847183	Val Loss: 0.01907157339155674
+Epoch: 225	Learning Rate :0.0007777720579008728	Train Loss: 0.016922365874052048	Val Loss: 0.019527493044734
+Epoch: 226	Learning Rate :0.0007744982822872878	Train Loss: 0.01876782439649105	Val Loss: 0.01700419932603836
+Epoch: 227	Learning Rate :0.0007712075743269575	Train Loss: 0.0175454281270504	Val Loss: 0.018540872260928154
+Epoch: 228	Learning Rate :0.0007679001370062493	Train Loss: 0.01700643263757229	Val Loss: 0.013553786091506481
+Epoch: 229	Learning Rate :0.0007645761743434766	Train Loss: 0.01637852005660534	Val Loss: 0.014924953691661358
+Epoch: 230	Learning Rate :0.0007612358913763139	Train Loss: 0.016357099637389183	Val Loss: 0.014768330380320549
+Epoch: 231	Learning Rate :0.0007578794941491485	Train Loss: 0.017150018364191055	Val Loss: 0.013980691321194172
+Epoch: 232	Learning Rate :0.0007545071897003718	Train Loss: 0.016779964789748192	Val Loss: 0.01854597218334675
+Epoch: 233	Learning Rate :0.0007511191860496066	Train Loss: 0.01693839207291603	Val Loss: 0.017890382558107376
+Epoch: 234	Learning Rate :0.0007477156921848775	Train Loss: 0.016556883230805397	Val Loss: 0.01957484893500805
+Epoch: 235	Learning Rate :0.0007442969180497177	Train Loss: 0.01829085499048233	Val Loss: 0.020423753187060356
+Epoch: 236	Learning Rate :0.0007408630745302198	Train Loss: 0.015587789937853813	Val Loss: 0.019040174782276154
+Epoch: 237	Learning Rate :0.0007374143734420268	Train Loss: 0.01697589084506035	Val Loss: 0.018715880811214447
+Epoch: 238	Learning Rate :0.0007339510275172668	Train Loss: 0.016541862860322	Val Loss: 0.02134660631418228
+Epoch: 239	Learning Rate :0.0007304732503914303	Train Loss: 0.01677834615111351	Val Loss: 0.013990986160933971
+Epoch: 240	Learning Rate :0.0007269812565901922	Train Loss: 0.015991007909178734	Val Loss: 0.014676068909466267
+Epoch: 241	Learning Rate :0.0007234752615161786	Train Loss: 0.015784963965415955	Val Loss: 0.014534013345837593
+Epoch: 242	Learning Rate :0.0007199554814356808	Train Loss: 0.015043063089251518	Val Loss: 0.01496209017932415
+Epoch: 243	Learning Rate :0.0007164221334653136	Train Loss: 0.015308162197470665	Val Loss: 0.016532674431800842
+Epoch: 244	Learning Rate :0.0007128754355586235	Train Loss: 0.015090306289494038	Val Loss: 0.013676851987838745
+Epoch: 245	Learning Rate :0.0007093156064926436	Train Loss: 0.015698248520493507	Val Loss: 0.015266314148902893
+Epoch: 246	Learning Rate :0.0007057428658543993	Train Loss: 0.01608423702418804	Val Loss: 0.015251053497195244
+Epoch: 247	Learning Rate :0.000702157434027362	Train Loss: 0.015945540741086006	Val Loss: 0.013592544943094254
+Epoch: 248	Learning Rate :0.0006985595321778559	Train Loss: 0.015522316098213196	Val Loss: 0.015721704810857773
+Epoch: 249	Learning Rate :0.0006949493822414145	Train Loss: 0.015071786940097809	Val Loss: 0.014045470394194126
+Epoch: 250	Learning Rate :0.0006913272069090912	Train Loss: 0.01673044264316559	Val Loss: 0.021330246701836586
+Epoch: 251	Learning Rate :0.0006876932296137226	Train Loss: 0.015560169704258442	Val Loss: 0.013945244252681732
+Epoch: 252	Learning Rate :0.0006840476745161459	Train Loss: 0.014808409847319126	Val Loss: 0.01421006303280592
+Epoch: 253	Learning Rate :0.0006803907664913714	Train Loss: 0.01610795594751835	Val Loss: 0.017345601692795753
+Epoch: 254	Learning Rate :0.0006767227311147117	Train Loss: 0.014717046171426773	Val Loss: 0.01805075816810131
+Epoch: 255	Learning Rate :0.000673043794647867	Train Loss: 0.014905380085110664	Val Loss: 0.013541021384298801
+Epoch: 256	Learning Rate :0.0006693541840249678	Train Loss: 0.015492742881178856	Val Loss: 0.016721943393349648
+Epoch: 257	Learning Rate :0.000665654126838577	Train Loss: 0.015055028721690178	Val Loss: 0.015279670245945454
+Epoch: 258	Learning Rate :0.0006619438513256505	Train Loss: 0.01487809605896473	Val Loss: 0.013537480495870113
+Epoch: 259	Learning Rate :0.000658223586353459	Train Loss: 0.013906454667448997	Val Loss: 0.01385695580393076
+Epoch: 260	Learning Rate :0.0006544935614054701	Train Loss: 0.014668814837932587	Val Loss: 0.01345148216933012
+Epoch: 261	Learning Rate :0.0006507540065671923	Train Loss: 0.013863205909729004	Val Loss: 0.01536845974624157
+Epoch: 262	Learning Rate :0.0006470051525119833	Train Loss: 0.014136283658444881	Val Loss: 0.013849182054400444
+Epoch: 263	Learning Rate :0.0006432472304868195	Train Loss: 0.01435601431876421	Val Loss: 0.011260558851063251
+Epoch: 264	Learning Rate :0.0006394804722980331	Train Loss: 0.013944119215011597	Val Loss: 0.01587236300110817
+Epoch: 265	Learning Rate :0.0006357051102970122	Train Loss: 0.014768376015126705	Val Loss: 0.015764178708195686
+Epoch: 266	Learning Rate :0.0006319213773658682	Train Loss: 0.014717601239681244	Val Loss: 0.01509685255587101
+Epoch: 267	Learning Rate :0.0006281295069030717	Train Loss: 0.013460676185786724	Val Loss: 0.01528867706656456
+Epoch: 268	Learning Rate :0.0006243297328090539	Train Loss: 0.013959472998976707	Val Loss: 0.018641361966729164
+Epoch: 269	Learning Rate :0.0006205222894717796	Train Loss: 0.014668012037873268	Val Loss: 0.013066684827208519
+Epoch: 270	Learning Rate :0.0006167074117522883	Train Loss: 0.013748609460890293	Val Loss: 0.013481429778039455
+Epoch: 271	Learning Rate :0.0006128853349702077	Train Loss: 0.013462540693581104	Val Loss: 0.015809284523129463
+Epoch: 272	Learning Rate :0.0006090562948892371	Train Loss: 0.013417103327810764	Val Loss: 0.015567447990179062
+Epoch: 273	Learning Rate :0.0006052205277026052	Train Loss: 0.013065892271697521	Val Loss: 0.010484653525054455
+Epoch: 274	Learning Rate :0.0006013782700185	Train Loss: 0.013169201090931892	Val Loss: 0.01204817183315754
+Epoch: 275	Learning Rate :0.0005975297588454742	Train Loss: 0.014476115815341473	Val Loss: 0.012853926979005337
+Epoch: 276	Learning Rate :0.0005936752315778251	Train Loss: 0.01358063705265522	Val Loss: 0.016377246007323265
+Epoch: 277	Learning Rate :0.0005898149259809509	Train Loss: 0.013312296941876411	Val Loss: 0.015489245764911175
+Epoch: 278	Learning Rate :0.0005859490801766846	Train Loss: 0.01310550607740879	Val Loss: 0.019208606332540512
+Epoch: 279	Learning Rate :0.0005820779326286051	Train Loss: 0.01327911764383316	Val Loss: 0.012662568129599094
+Epoch: 280	Learning Rate :0.0005782017221273279	Train Loss: 0.013443287461996078	Val Loss: 0.01252936664968729
+Epoch: 281	Learning Rate :0.0005743206877757753	Train Loss: 0.012745327316224575	Val Loss: 0.011261976324021816
+Epoch: 282	Learning Rate :0.0005704350689744275	Train Loss: 0.01319868490099907	Val Loss: 0.013242492452263832
+Epoch: 283	Learning Rate :0.0005665451054065549	Train Loss: 0.012303736992180347	Val Loss: 0.011302653700113297
+Epoch: 284	Learning Rate :0.0005626510370234339	Train Loss: 0.012684755027294159	Val Loss: 0.016196684911847115
+Epoch: 285	Learning Rate :0.0005587531040295449	Train Loss: 0.012893703766167164	Val Loss: 0.013627002947032452
+Epoch: 286	Learning Rate :0.000554851546867756	Train Loss: 0.011882731691002846	Val Loss: 0.014048455283045769
+Epoch: 287	Learning Rate :0.0005509466062044907	Train Loss: 0.011873641051352024	Val Loss: 0.010679956525564194
+Epoch: 288	Learning Rate :0.0005470385229148833	Train Loss: 0.012084350921213627	Val Loss: 0.011736755259335041
+Epoch: 289	Learning Rate :0.0005431275380679199	Train Loss: 0.013230017386376858	Val Loss: 0.011978540569543839
+Epoch: 290	Learning Rate :0.0005392138929115678	Train Loss: 0.012214602902531624	Val Loss: 0.010811214335262775
+Epoch: 291	Learning Rate :0.0005352978288578954	Train Loss: 0.012426616623997688	Val Loss: 0.012147653847932816
+Epoch: 292	Learning Rate :0.0005313795874681799	Train Loss: 0.012219535186886787	Val Loss: 0.013368713669478893
+Epoch: 293	Learning Rate :0.0005274594104380068	Train Loss: 0.012321898713707924	Val Loss: 0.011485808528959751
+Epoch: 294	Learning Rate :0.000523537539582361	Train Loss: 0.01155039481818676	Val Loss: 0.012072808109223843
+Epoch: 295	Learning Rate :0.0005196142168207102	Train Loss: 0.012197235599160194	Val Loss: 0.013936206698417664
+Epoch: 296	Learning Rate :0.0005156896841620834	Train Loss: 0.011799542233347893	Val Loss: 0.011357373557984829
+Epoch: 297	Learning Rate :0.0005117641836901407	Train Loss: 0.011277307756245136	Val Loss: 0.010826515965163708
+Epoch: 298	Learning Rate :0.0005078379575482422	Train Loss: 0.011185252107679844	Val Loss: 0.01103302463889122
+Epoch: 299	Learning Rate :0.0005039112479245107	Train Loss: 0.011111371219158173	Val Loss: 0.010358781553804874
+Epoch: 300	Learning Rate :0.0004999842970368918	Train Loss: 0.011427592486143112	Val Loss: 0.010662660002708435
+Epoch: 301	Learning Rate :0.000496057347118214	Train Loss: 0.0101840291172266	Val Loss: 0.017403028905391693
+Epoch: 302	Learning Rate :0.0004921306404012462	Train Loss: 0.011353007517755032	Val Loss: 0.013721620664000511
+Epoch: 303	Learning Rate :0.0004882044191037546	Train Loss: 0.011684116907417774	Val Loss: 0.014098875224590302
+Epoch: 304	Learning Rate :0.0004842789254135633	Train Loss: 0.010856086388230324	Val Loss: 0.010897861793637276
+Epoch: 305	Learning Rate :0.0004803544014736138	Train Loss: 0.011599458754062653	Val Loss: 0.013776189647614956
+Epoch: 306	Learning Rate :0.000476431089367029	Train Loss: 0.010677198879420757	Val Loss: 0.011164907366037369
+Epoch: 307	Learning Rate :0.00047250923110217974	Train Loss: 0.011336823925375938	Val Loss: 0.011124493554234505
+Epoch: 308	Learning Rate :0.00046858906859775773	Train Loss: 0.010471335612237453	Val Loss: 0.009788904339075089
+Epoch: 309	Learning Rate :0.00046467084366785154	Train Loss: 0.010818027891218662	Val Loss: 0.013379247859120369
+Epoch: 310	Learning Rate :0.00046075479800703183	Train Loss: 0.011842063628137112	Val Loss: 0.011568752117455006
+Epoch: 311	Learning Rate :0.00045684117317544066	Train Loss: 0.010540873743593693	Val Loss: 0.010291019454598427
+Epoch: 312	Learning Rate :0.00045293021058389276	Train Loss: 0.010478702373802662	Val Loss: 0.013211134821176529
+Epoch: 313	Learning Rate :0.0004490221514789829	Train Loss: 0.010908654890954494	Val Loss: 0.011629438027739525
+Epoch: 314	Learning Rate :0.00044511723692820554	Train Loss: 0.010144414380192757	Val Loss: 0.01121288537979126
+Epoch: 315	Learning Rate :0.0004412157078050835	Train Loss: 0.010064140893518925	Val Loss: 0.011212693527340889
+Epoch: 316	Learning Rate :0.00043731780477431143	Train Loss: 0.0097254803404212	Val Loss: 0.010245966725051403
+Epoch: 317	Learning Rate :0.0004334237682769086	Train Loss: 0.009853646159172058	Val Loss: 0.008803118951618671
+Epoch: 318	Learning Rate :0.00042953383851538913	Train Loss: 0.009848428890109062	Val Loss: 0.00970777403563261
+Epoch: 319	Learning Rate :0.0004256482554389436	Train Loss: 0.010120240971446037	Val Loss: 0.009757393039762974
+Epoch: 320	Learning Rate :0.000421767258728639	Train Loss: 0.009750877507030964	Val Loss: 0.009001687169075012
+Epoch: 321	Learning Rate :0.00041789108778263374	Train Loss: 0.009002198465168476	Val Loss: 0.009473883546888828
+Epoch: 322	Learning Rate :0.00041401998170140973	Train Loss: 0.009990858845412731	Val Loss: 0.010449417866766453
+Epoch: 323	Learning Rate :0.00041015417927302506	Train Loss: 0.009741184301674366	Val Loss: 0.010257279500365257
+Epoch: 324	Learning Rate :0.0004062939189583827	Train Loss: 0.009093926288187504	Val Loss: 0.009090940468013287
+Epoch: 325	Learning Rate :0.00040243943887652246	Train Loss: 0.009406491182744503	Val Loss: 0.009483912028372288
+Epoch: 326	Learning Rate :0.00039859097678993197	Train Loss: 0.009142420254647732	Val Loss: 0.009641093201935291
+Epoch: 327	Learning Rate :0.00039474877008988086	Train Loss: 0.009688506834208965	Val Loss: 0.010044580325484276
+Epoch: 328	Learning Rate :0.00039091305578177644	Train Loss: 0.00969527754932642	Val Loss: 0.010336260311305523
+Epoch: 329	Learning Rate :0.00038708407047054525	Train Loss: 0.009122313931584358	Val Loss: 0.010389050468802452
+Epoch: 330	Learning Rate :0.0003832620503460373	Train Loss: 0.009422237984836102	Val Loss: 0.011993984691798687
+Epoch: 331	Learning Rate :0.00037944723116845746	Train Loss: 0.008778533898293972	Val Loss: 0.008497021161019802
+Epoch: 332	Learning Rate :0.00037563984825382155	Train Loss: 0.009132606908679008	Val Loss: 0.009914514608681202
+Epoch: 333	Learning Rate :0.0003718401364594425	Train Loss: 0.009287790395319462	Val Loss: 0.008426555432379246
+Epoch: 334	Learning Rate :0.0003680483301694419	Train Loss: 0.009148995392024517	Val Loss: 0.009900765493512154
+Epoch: 335	Learning Rate :0.0003642646632802929	Train Loss: 0.009280621074140072	Val Loss: 0.012310776859521866
+Epoch: 336	Learning Rate :0.0003604893691863915	Train Loss: 0.00927935540676117	Val Loss: 0.012798468582332134
+Epoch: 337	Learning Rate :0.000356722680765661	Train Loss: 0.008505405858159065	Val Loss: 0.008380931802093983
+Epoch: 338	Learning Rate :0.00035296483036518556	Train Loss: 0.008667213842272758	Val Loss: 0.008942539803683758
+Epoch: 339	Learning Rate :0.0003492160497868794	Train Loss: 0.008214780129492283	Val Loss: 0.008404895663261414
+Epoch: 340	Learning Rate :0.00034547657027318626	Train Loss: 0.010369598865509033	Val Loss: 0.010151696391403675
+Epoch: 341	Learning Rate :0.0003417466224928177	Train Loss: 0.008760337717831135	Val Loss: 0.007878811098635197
+Epoch: 342	Learning Rate :0.000338026436526522	Train Loss: 0.008656524121761322	Val Loss: 0.008149774745106697
+Epoch: 343	Learning Rate :0.0003343162418528936	Train Loss: 0.007873086258769035	Val Loss: 0.008804487064480782
+Epoch: 344	Learning Rate :0.0003306162673342161	Train Loss: 0.008399161510169506	Val Loss: 0.010111239738762379
+Epoch: 345	Learning Rate :0.0003269267412023466	Train Loss: 0.00836715567857027	Val Loss: 0.008429078385233879
+Epoch: 346	Learning Rate :0.0003232478910446361	Train Loss: 0.0078326016664505	Val Loss: 0.007976504974067211
+Epoch: 347	Learning Rate :0.0003195799437898909	Train Loss: 0.008373039774596691	Val Loss: 0.009909642860293388
+Epoch: 348	Learning Rate :0.00031592312569437577	Train Loss: 0.008020020090043545	Val Loss: 0.009151868522167206
+Epoch: 349	Learning Rate :0.0003122776623278555	Train Loss: 0.008538558147847652	Val Loss: 0.010602620430290699
+Epoch: 350	Learning Rate :0.00030864377855968254	Train Loss: 0.00861577969044447	Val Loss: 0.00901806354522705
+Epoch: 351	Learning Rate :0.00030502169854492464	Train Loss: 0.008056933991611004	Val Loss: 0.009005212225019932
+Epoch: 352	Learning Rate :0.00030141164571053893	Train Loss: 0.007865135557949543	Val Loss: 0.009764443151652813
+Epoch: 353	Learning Rate :0.00029781384274158866	Train Loss: 0.0074100010097026825	Val Loss: 0.008806432597339153
+Epoch: 354	Learning Rate :0.0002942285115675084	Train Loss: 0.007450321223586798	Val Loss: 0.007825328037142754
+Epoch: 355	Learning Rate :0.00029065587334841335	Train Loss: 0.007969283498823643	Val Loss: 0.009446794167160988
+Epoch: 356	Learning Rate :0.0002870961484614575	Train Loss: 0.007308242376893759	Val Loss: 0.009048402309417725
+Epoch: 357	Learning Rate :0.00028354955648723966	Train Loss: 0.0070410617627203465	Val Loss: 0.008985515683889389
+Epoch: 358	Learning Rate :0.00028001631619625875	Train Loss: 0.007073616608977318	Val Loss: 0.008630004711449146
+Epoch: 359	Learning Rate :0.00027649664553541895	Train Loss: 0.00751427561044693	Val Loss: 0.010210645385086536
+Epoch: 360	Learning Rate :0.0002729907616145857	Train Loss: 0.007079258561134338	Val Loss: 0.007703169248998165
+Epoch: 361	Learning Rate :0.0002694988806931933	Train Loss: 0.007613250520080328	Val Loss: 0.008068883791565895
+Epoch: 362	Learning Rate :0.0002660212181669058	Train Loss: 0.006711965426802635	Val Loss: 0.008566280826926231
+Epoch: 363	Learning Rate :0.00026255798855432825	Train Loss: 0.006639096885919571	Val Loss: 0.008010674268007278
+Epoch: 364	Learning Rate :0.000259109405483777	Train Loss: 0.007014187052845955	Val Loss: 0.008229400031268597
+Epoch: 365	Learning Rate :0.0002556756816801	Train Loss: 0.006665925960987806	Val Loss: 0.008421388454735279
+Epoch: 366	Learning Rate :0.0002522570289515557	Train Loss: 0.007490635849535465	Val Loss: 0.00951242633163929
+Epoch: 367	Learning Rate :0.0002488536581767476	Train Loss: 0.00677444227039814	Val Loss: 0.009010820649564266
+Epoch: 368	Learning Rate :0.00024546577929161653	Train Loss: 0.006643254775553942	Val Loss: 0.008190168999135494
+Epoch: 369	Learning Rate :0.0002420936012764902	Train Loss: 0.006613307166844606	Val Loss: 0.009153538383543491
+Epoch: 370	Learning Rate :0.00023873733214319355	Train Loss: 0.006209259387105703	Val Loss: 0.007490812800824642
+Epoch: 371	Learning Rate :0.00023539717892221554	Train Loss: 0.006267358548939228	Val Loss: 0.008256136439740658
+Epoch: 372	Learning Rate :0.00023207334764994048	Train Loss: 0.006957869976758957	Val Loss: 0.007815132848918438
+Epoch: 373	Learning Rate :0.00022876604335593834	Train Loss: 0.006270734593272209	Val Loss: 0.007619492243975401
+Epoch: 374	Learning Rate :0.00022547547005031613	Train Loss: 0.006386380642652512	Val Loss: 0.007672829087823629
+Epoch: 375	Learning Rate :0.000222201830711136	Train Loss: 0.00614050030708313	Val Loss: 0.0084137674421072
+Epoch: 376	Learning Rate :0.00021894532727189186	Train Loss: 0.005495100747793913	Val Loss: 0.007604910526424646
+Epoch: 377	Learning Rate :0.00021570616060905584	Train Loss: 0.005728104617446661	Val Loss: 0.007678936701267958
+Epoch: 378	Learning Rate :0.00021248453052968554	Train Loss: 0.005996556952595711	Val Loss: 0.0076094334945082664
+Epoch: 379	Learning Rate :0.0002092806357590993	Train Loss: 0.006013658829033375	Val Loss: 0.007034752983599901
+Epoch: 380	Learning Rate :0.00020609467392861832	Train Loss: 0.005509765353053808	Val Loss: 0.007237073499709368
+Epoch: 381	Learning Rate :0.00020292684156337563	Train Loss: 0.006085449364036322	Val Loss: 0.007110332604497671
+Epoch: 382	Learning Rate :0.00019977733407019303	Train Loss: 0.005992560181766748	Val Loss: 0.008204828016459942
+Epoch: 383	Learning Rate :0.00019664634572552875	Train Loss: 0.0062273526564240456	Val Loss: 0.007549212779849768
+Epoch: 384	Learning Rate :0.0001935340696634915	Train Loss: 0.006062455475330353	Val Loss: 0.008716023527085781
+Epoch: 385	Learning Rate :0.00019044069786392949	Train Loss: 0.005364342126995325	Val Loss: 0.0071593536995351315
+Epoch: 386	Learning Rate :0.0001873664211405861	Train Loss: 0.00528260413557291	Val Loss: 0.007861831225454807
+Epoch: 387	Learning Rate :0.0001843114291293308	Train Loss: 0.0052820839919149876	Val Loss: 0.006840321235358715
+Epoch: 388	Learning Rate :0.00018127591027646125	Train Loss: 0.005526142194867134	Val Loss: 0.007459930144250393
+Epoch: 389	Learning Rate :0.00017826005182707873	Train Loss: 0.005461405031383038	Val Loss: 0.007444965653121471
+Epoch: 390	Learning Rate :0.00017526403981353822	Train Loss: 0.005243578460067511	Val Loss: 0.006889548152685165
+Epoch: 391	Learning Rate :0.00017228805904397377	Train Loss: 0.005201667547225952	Val Loss: 0.00722874328494072
+Epoch: 392	Learning Rate :0.00016933229309089662	Train Loss: 0.00518510676920414	Val Loss: 0.007399431895464659
+Epoch: 393	Learning Rate :0.0001663969242798742	Train Loss: 0.004936693236231804	Val Loss: 0.006809484679251909
+Epoch: 394	Learning Rate :0.00016348213367828137	Train Loss: 0.005091104656457901	Val Loss: 0.0070351650938391685
+Epoch: 395	Learning Rate :0.0001605881010841324	Train Loss: 0.005034530069679022	Val Loss: 0.006868633907288313
+Epoch: 396	Learning Rate :0.00015771500501498997	Train Loss: 0.004974946845322847	Val Loss: 0.007147598545998335
+Epoch: 397	Learning Rate :0.00015486302269695254	Train Loss: 0.0049111125990748405	Val Loss: 0.006871032528579235
+Epoch: 398	Learning Rate :0.00015203233005372412	Train Loss: 0.0050815860740840435	Val Loss: 0.0072526996955275536
+Epoch: 399	Learning Rate :0.00014922310169576043	Train Loss: 0.00473703583702445	Val Loss: 0.0066965497098863125
+Epoch: 400	Learning Rate :0.0001464355109094993	Train Loss: 0.005267340689897537	Val Loss: 0.007460303138941526
+Epoch: 401	Learning Rate :0.00014366972964667118	Train Loss: 0.004746657330542803	Val Loss: 0.0068465289659798145
+Epoch: 402	Learning Rate :0.0001409259285136923	Train Loss: 0.004526690114289522	Val Loss: 0.00698478939011693
+Epoch: 403	Learning Rate :0.00013820427676114084	Train Loss: 0.004583676811307669	Val Loss: 0.006583074107766151
+Epoch: 404	Learning Rate :0.0001355049422733175	Train Loss: 0.004680397920310497	Val Loss: 0.007380615919828415
+Epoch: 405	Learning Rate :0.00013282809155788788	Train Loss: 0.004480988252907991	Val Loss: 0.00640416145324707
+Epoch: 406	Learning Rate :0.0001301738897356137	Train Loss: 0.004335456993430853	Val Loss: 0.006815476808696985
+Epoch: 407	Learning Rate :0.00012754250053016548	Train Loss: 0.004521499387919903	Val Loss: 0.0068892911076545715
+Epoch: 408	Learning Rate :0.0001249340862580245	Train Loss: 0.004175777081400156	Val Loss: 0.006317087449133396
+Epoch: 409	Learning Rate :0.0001223488078184698	Train Loss: 0.004177556373178959	Val Loss: 0.006587915122509003
+Epoch: 410	Learning Rate :0.0001197868246836532	Train Loss: 0.00425351969897747	Val Loss: 0.006405339110642672
+Epoch: 411	Learning Rate :0.00011724829488876231	Train Loss: 0.0042620450258255005	Val Loss: 0.006493387743830681
+Epoch: 412	Learning Rate :0.0001147333750222729	Train Loss: 0.0044160643592476845	Val Loss: 0.00692814402282238
+Epoch: 413	Learning Rate :0.00011224222021628816	Train Loss: 0.004283036570996046	Val Loss: 0.006409673951566219
+Epoch: 414	Learning Rate :0.00010977498413697121	Train Loss: 0.003975510131567717	Val Loss: 0.0065547204576432705
+Epoch: 415	Learning Rate :0.00010733181897506507	Train Loss: 0.004103727173060179	Val Loss: 0.006404749117791653
+Epoch: 416	Learning Rate :0.00010491287543650526	Train Loss: 0.004117263946682215	Val Loss: 0.006392177660018206
+Epoch: 417	Learning Rate :0.00010251830273312346	Train Loss: 0.004064222332090139	Val Loss: 0.006340344902127981
+Epoch: 418	Learning Rate :0.00010014824857344346	Train Loss: 0.003934709820896387	Val Loss: 0.0063568949699401855
+Epoch: 419	Learning Rate :9.780285915356968e-05	Train Loss: 0.0037064908538013697	Val Loss: 0.006200456526130438
+Epoch: 420	Learning Rate :9.548227914816967e-05	Train Loss: 0.003866551909595728	Val Loss: 0.00653208140283823
+Epoch: 421	Learning Rate :9.318665170154867e-05	Train Loss: 0.003784947330132127	Val Loss: 0.006315248087048531
+Epoch: 422	Learning Rate :9.091611841882102e-05	Train Loss: 0.003707282477989793	Val Loss: 0.006664776708930731
+Epoch: 423	Learning Rate :8.867081935717509e-05	Train Loss: 0.003682653419673443	Val Loss: 0.006911591161042452
+Epoch: 424	Learning Rate :8.645089301723282e-05	Train Loss: 0.003770551411435008	Val Loss: 0.006264863070100546
+Epoch: 425	Learning Rate :8.425647633450813e-05	Train Loss: 0.0037498122546821833	Val Loss: 0.006306643132120371
+Epoch: 426	Learning Rate :8.20877046709582e-05	Train Loss: 0.0034787990152835846	Val Loss: 0.006177878938615322
+Epoch: 427	Learning Rate :7.994471180663531e-05	Train Loss: 0.003960504196584225	Val Loss: 0.006235753186047077
+Epoch: 428	Learning Rate :7.782762993143374e-05	Train Loss: 0.0035006834659725428	Val Loss: 0.006217786576598883
+Epoch: 429	Learning Rate :7.573658963693579e-05	Train Loss: 0.0035106667783111334	Val Loss: 0.006282899063080549
+Epoch: 430	Learning Rate :7.367171990835662e-05	Train Loss: 0.0035421857610344887	Val Loss: 0.006230542901903391
+Epoch: 431	Learning Rate :7.163314811658739e-05	Train Loss: 0.0034386692568659782	Val Loss: 0.00635969964787364
+Epoch: 432	Learning Rate :6.962100001033868e-05	Train Loss: 0.0035194805823266506	Val Loss: 0.00597102427855134
+Epoch: 433	Learning Rate :6.763539970838408e-05	Train Loss: 0.0033428510650992393	Val Loss: 0.005994739010930061
+Epoch: 434	Learning Rate :6.567646969190276e-05	Train Loss: 0.003508159192278981	Val Loss: 0.006299095693975687
+Epoch: 435	Learning Rate :6.374433079692588e-05	Train Loss: 0.003396795829758048	Val Loss: 0.006071531679481268
+Epoch: 436	Learning Rate :6.183910220688158e-05	Train Loss: 0.0032013384625315666	Val Loss: 0.006013457663357258
+Epoch: 437	Learning Rate :5.996090144524364e-05	Train Loss: 0.0033766869455575943	Val Loss: 0.0064506870694458485
+Epoch: 438	Learning Rate :5.810984436828226e-05	Train Loss: 0.0031866608187556267	Val Loss: 0.006013575010001659
+Epoch: 439	Learning Rate :5.6286045157917095e-05	Train Loss: 0.0033945413306355476	Val Loss: 0.005895815324038267
+Epoch: 440	Learning Rate :5.448961631467426e-05	Train Loss: 0.003182693850249052	Val Loss: 0.0061195725575089455
+Epoch: 441	Learning Rate :5.2720668650747066e-05	Train Loss: 0.0031588124111294746	Val Loss: 0.0062421695329248905
+Epoch: 442	Learning Rate :5.09793112831595e-05	Train Loss: 0.003187664784491062	Val Loss: 0.005929993931204081
+Epoch: 443	Learning Rate :4.926565162703672e-05	Train Loss: 0.003141189692541957	Val Loss: 0.005944877862930298
+Epoch: 444	Learning Rate :4.7579795388978435e-05	Train Loss: 0.003106342162936926	Val Loss: 0.006095497868955135
+Epoch: 445	Learning Rate :4.592184656053841e-05	Train Loss: 0.003135381732136011	Val Loss: 0.005966076161712408
+Epoch: 446	Learning Rate :4.4291907411810113e-05	Train Loss: 0.0030570782255381346	Val Loss: 0.0061024450697004795
+Epoch: 447	Learning Rate :4.269007848511769e-05	Train Loss: 0.0030223538633435965	Val Loss: 0.005958849564194679
+Epoch: 448	Learning Rate :4.111645858881486e-05	Train Loss: 0.003005159320309758	Val Loss: 0.006053093355149031
+Epoch: 449	Learning Rate :3.957114479118918e-05	Train Loss: 0.0029381264466792345	Val Loss: 0.005988942459225655
+Epoch: 450	Learning Rate :3.805423241447474e-05	Train Loss: 0.0029553973581641912	Val Loss: 0.005942627787590027
+Epoch: 451	Learning Rate :3.656581502897223e-05	Train Loss: 0.0029590188059955835	Val Loss: 0.005901102442294359
+Epoch: 452	Learning Rate :3.510598444727714e-05	Train Loss: 0.00297069875523448	Val Loss: 0.005920917261391878
+Epoch: 453	Learning Rate :3.367483071861597e-05	Train Loss: 0.0029738640878349543	Val Loss: 0.005984647665172815
+Epoch: 454	Learning Rate :3.227244212329236e-05	Train Loss: 0.0029186501633375883	Val Loss: 0.005999565124511719
+Epoch: 455	Learning Rate :3.089890516724031e-05	Train Loss: 0.002921612001955509	Val Loss: 0.005849525332450867
+Epoch: 456	Learning Rate :2.9554304576689545e-05	Train Loss: 0.00288410228677094	Val Loss: 0.00591969583183527
+Epoch: 457	Learning Rate :2.8238723292938014e-05	Train Loss: 0.002897735917940736	Val Loss: 0.005973171908408403
+Epoch: 458	Learning Rate :2.695224246723618e-05	Train Loss: 0.002824649680405855	Val Loss: 0.005857295822352171
+Epoch: 459	Learning Rate :2.5694941455781313e-05	Train Loss: 0.0027866223827004433	Val Loss: 0.005892348010092974
+Epoch: 460	Learning Rate :2.4466897814822164e-05	Train Loss: 0.002806922886520624	Val Loss: 0.005944618955254555
+Epoch: 461	Learning Rate :2.326818729587504e-05	Train Loss: 0.00279002683237195	Val Loss: 0.005747925024479628
+Epoch: 462	Learning Rate :2.2098883841051458e-05	Train Loss: 0.00277504394762218	Val Loss: 0.005883635021746159
+Epoch: 463	Learning Rate :2.095905957849605e-05	Train Loss: 0.002769774291664362	Val Loss: 0.0058928001672029495
+Epoch: 464	Learning Rate :1.984878481793865e-05	Train Loss: 0.0027496623806655407	Val Loss: 0.005803778767585754
+Epoch: 465	Learning Rate :1.8768128046356278e-05	Train Loss: 0.0027314634062349796	Val Loss: 0.005862066987901926
+Epoch: 466	Learning Rate :1.7717155923748942e-05	Train Loss: 0.0027185012586414814	Val Loss: 0.005872564390301704
+Epoch: 467	Learning Rate :1.6695933279027683e-05	Train Loss: 0.0027144458144903183	Val Loss: 0.005873766262084246
+Epoch: 468	Learning Rate :1.5704523106015584e-05	Train Loss: 0.0026993753854185343	Val Loss: 0.005783705972135067
+Epoch: 469	Learning Rate :1.4742986559562107e-05	Train Loss: 0.0026884747203439474	Val Loss: 0.005842923186719418
+Epoch: 470	Learning Rate :1.381138295177072e-05	Train Loss: 0.0026867412962019444	Val Loss: 0.005836327560245991
+Epoch: 471	Learning Rate :1.2909769748340156e-05	Train Loss: 0.0026982107665389776	Val Loss: 0.005834277253597975
+Epoch: 472	Learning Rate :1.2038202565019702e-05	Train Loss: 0.002674791729077697	Val Loss: 0.005853034555912018
+Epoch: 473	Learning Rate :1.1196735164178873e-05	Train Loss: 0.0026599359698593616	Val Loss: 0.005764624569565058
+Epoch: 474	Learning Rate :1.038541945149041e-05	Train Loss: 0.002652870723977685	Val Loss: 0.005774777848273516
+Epoch: 475	Learning Rate :9.604305472729282e-06	Train Loss: 0.002652430674061179	Val Loss: 0.005809643305838108
+Epoch: 476	Learning Rate :8.853441410684874e-06	Train Loss: 0.0026353485882282257	Val Loss: 0.005824534222483635
+Epoch: 477	Learning Rate :8.132873582189595e-06	Train Loss: 0.0026374482549726963	Val Loss: 0.00586130702868104
+Epoch: 478	Learning Rate :7.442646435261263e-06	Train Loss: 0.0026263929903507233	Val Loss: 0.0058120558969676495
+Epoch: 479	Learning Rate :6.7828025463614775e-06	Train Loss: 0.0026211284566670656	Val Loss: 0.005822415929287672
+Epoch: 480	Learning Rate :6.153382617769488e-06	Train Loss: 0.0026134217623621225	Val Loss: 0.005802286323159933
+Epoch: 481	Learning Rate :5.55442547507132e-06	Train Loss: 0.0026132401544600725	Val Loss: 0.005762564018368721
+Epoch: 482	Learning Rate :4.9859680647648525e-06	Train Loss: 0.0026081055402755737	Val Loss: 0.005776799283921719
+Epoch: 483	Learning Rate :4.448045451980923e-06	Train Loss: 0.0026077397633343935	Val Loss: 0.0058081671595573425
+Epoch: 484	Learning Rate :3.9406908183199995e-06	Train Loss: 0.0025980365462601185	Val Loss: 0.005788673646748066
+Epoch: 485	Learning Rate :3.46393545980582e-06	Train Loss: 0.0025921608321368694	Val Loss: 0.0057900226674973965
+Epoch: 486	Learning Rate :3.017808784954656e-06	Train Loss: 0.002591591328382492	Val Loss: 0.005770977586507797
+Epoch: 487	Learning Rate :2.6023383129611555e-06	Train Loss: 0.00258397008292377	Val Loss: 0.005791409406810999
+Epoch: 488	Learning Rate :2.2175496720010877e-06	Train Loss: 0.002582013141363859	Val Loss: 0.005790336988866329
+Epoch: 489	Learning Rate :1.8634665976503871e-06	Train Loss: 0.0025793917011469603	Val Loss: 0.005789223127067089
+Epoch: 490	Learning Rate :1.5401109314209335e-06	Train Loss: 0.002577028935775161	Val Loss: 0.005781290587037802
+Epoch: 491	Learning Rate :1.2475026194134099e-06	Train Loss: 0.00257329223677516	Val Loss: 0.005784532520920038
+Epoch: 492	Learning Rate :9.856597110867853e-07	Train Loss: 0.0025723176077008247	Val Loss: 0.005778841208666563
+Epoch: 493	Learning Rate :7.545983581449833e-07	Train Loss: 0.0025719082914292812	Val Loss: 0.005790885537862778
+Epoch: 494	Learning Rate :5.543328135406796e-07	Train Loss: 0.002570167649537325	Val Loss: 0.005780237261205912
+Epoch: 495	Learning Rate :3.848754305960046e-07	Train Loss: 0.0025685164146125317	Val Loss: 0.005785739980638027
+Epoch: 496	Learning Rate :2.462366622405977e-07	Train Loss: 0.0025667932350188494	Val Loss: 0.005785612389445305
+Epoch: 497	Learning Rate :1.3842506036662342e-07	Train Loss: 0.0025659045204520226	Val Loss: 0.005783047527074814
+Epoch: 498	Learning Rate :6.144727530169254e-08	Train Loss: 0.002564825816079974	Val Loss: 0.005782399792224169
+Epoch: 499	Learning Rate :1.5308055398024608e-08	Train Loss: 0.0025643231347203255	Val Loss: 0.0057818773202598095
+Epoch: 500	Learning Rate :1.0246740125861636e-11	Train Loss: 0.0025639282539486885	Val Loss: 0.005782017018646002
+Finish Training !
