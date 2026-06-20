@@ -1,0 +1,57 @@
+{
+  "Darcy": {
+    "dataset": "Darcy",
+    "config": "LNO_Darcy",
+    "checkpoint": "LNO-PyTorch\\ForwardProblem\\experiments\\LNO_Darcy\\checkpoint\\450.pt",
+    "num_eval_samples": 5,
+    "mean_rel_l2": 0.004496880644001067,
+    "std_rel_l2": 0.0055565970918824035,
+    "min_rel_l2": 0.000952122500166297,
+    "max_rel_l2": 0.015576723031699657,
+    "visualization": "outputs\\forward_visualization\\Darcy_prediction.png"
+  },
+  "Airfoil": {
+    "dataset": "Airfoil",
+    "config": "LNO_Airfoil",
+    "checkpoint": "LNO-PyTorch\\ForwardProblem\\experiments\\LNO_Airfoil\\checkpoint\\500.pt",
+    "num_eval_samples": 5,
+    "mean_rel_l2": 0.006557241640985012,
+    "std_rel_l2": 0.0043827089097350745,
+    "min_rel_l2": 0.0015061753802001476,
+    "max_rel_l2": 0.012943446636199951,
+    "visualization": "outputs\\forward_visualization\\Airfoil_prediction.png"
+  },
+  "Pipe": {
+    "dataset": "Pipe",
+    "config": "LNO_Pipe",
+    "checkpoint": "LNO-PyTorch\\ForwardProblem\\experiments\\LNO_Pipe\\checkpoint\\500.pt",
+    "num_eval_samples": 5,
+    "mean_rel_l2": 0.0009172357269562781,
+    "std_rel_l2": 0.0004064767817613094,
+    "min_rel_l2": 0.00047112483298406005,
+    "max_rel_l2": 0.0016831315588206053,
+    "visualization": "outputs\\forward_visualization\\Pipe_prediction.png"
+  },
+  "Elasticity": {
+    "dataset": "Elasticity",
+    "config": "LNO_Elasticity",
+    "checkpoint": "LNO-PyTorch\\ForwardProblem\\experiments\\LNO_Elasticity\\checkpoint\\500.pt",
+    "num_eval_samples": 5,
+    "mean_rel_l2": 0.0038358920719474554,
+    "std_rel_l2": 0.001223682313323823,
+    "min_rel_l2": 0.002964831655845046,
+    "max_rel_l2": 0.006238064728677273,
+    "visualization": "outputs\\forward_visualization\\Elasticity_prediction.png"
+  },
+  "Plasticity": {
+    "dataset": "Plasticity",
+    "config": "LNO_Plasticity",
+    "checkpoint": "LNO-PyTorch\\ForwardProblem\\experiments\\LNO_Plasticity\\checkpoint\\500.pt",
+    "num_eval_samples": 5,
+    "mean_rel_l2": 0.001957460702396929,
+    "std_rel_l2": 0.0001769658207464818,
+    "min_rel_l2": 0.0017363771330565214,
+    "max_rel_l2": 0.002220714697614312,
+    "visualization": "outputs\\forward_visualization\\Plasticity_prediction.png"
+  }
+}
