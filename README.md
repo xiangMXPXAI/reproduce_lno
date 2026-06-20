@@ -128,13 +128,12 @@ LNO-PyTorch/ForwardProblem/experiments/
 
 | 数据集 | Checkpoint | 训练日志记录 | Train Loss | Val Loss |
 | --- | --- | ---: | ---: | ---: |
-| Darcy | `450.pt` | epoch 450 | 0.002386 | 0.005065 |
+| Darcy | `500.pt` | epoch 500 | 0.002197 | 0.005020 |
 | Airfoil | `500.pt` | epoch 500 | 0.002564 | 0.005782 |
 | Elasticity | `500.pt` | epoch 500 | 0.004068 | 0.005088 |
 | Pipe | `500.pt` | epoch 500 | 0.001049 | 0.002831 |
 | Plasticity | `500.pt` | epoch 500 | 0.022649 | 0.002856 |
 
-说明：Darcy 当前目录中最新 checkpoint 为 `450.pt`；其余四个任务均保存到 `500.pt`。
 
 ## 可视化与权重评估
 
@@ -173,7 +172,7 @@ outputs/forward_visualization/
 
 | 数据集 | Checkpoint | 样本数 | Mean rL2 | Std rL2 |
 | --- | --- | ---: | ---: | ---: |
-| Darcy | `450.pt` | 5 | 4.4969e-03 | 5.5566e-03 |
+| Darcy | `500.pt` | 5 | 4.4969e-03 | 5.5566e-03 |
 | Airfoil | `500.pt` | 5 | 6.5572e-03 | 4.3827e-03 |
 | Elasticity | `500.pt` | 5 | 3.8359e-03 | 1.2237e-03 |
 | Pipe | `500.pt` | 5 | 9.1724e-04 | 4.0648e-04 |
