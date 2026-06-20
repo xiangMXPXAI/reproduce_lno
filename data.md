@@ -41,6 +41,17 @@ y2 : [B, ..., y2_dim] -> [B, N, y2_dim]
 
 说明：表中的 `y1_dim` 是经过 `LNO_dataset` 拼接后的实际 branch 输入维度。
 
+下载地址
+
+| Dataset       | Link                                                         |
+| ------------- | ------------------------------------------------------------ |
+| Darcy         | [[Google Cloud]](https://drive.google.com/drive/folders/1UnbQh2WWc6knEHbLn-ZaXrKUZhp7pjt-) |
+| NS2d          | [[Google Cloud]](https://drive.google.com/drive/folders/1UnbQh2WWc6knEHbLn-ZaXrKUZhp7pjt-) |
+| AirFoil       | [[Google Cloud]](https://drive.google.com/drive/folders/1YBuaoTdOSr_qzaow-G-iwvbUI7fiUzu8) |
+| Elasticity    | [[Google Cloud]](https://drive.google.com/drive/folders/1YBuaoTdOSr_qzaow-G-iwvbUI7fiUzu8) |
+| Plasticity    | [[Google Cloud]](https://drive.google.com/drive/folders/1YBuaoTdOSr_qzaow-G-iwvbUI7fiUzu8) |
+| Pipe          | [[Google Cloud]](https://drive.google.com/drive/folders/1YBuaoTdOSr_qzaow-G-iwvbUI7fiUzu8) |
+
 ## 3. Darcy
 
 ### 3.1 物理背景
